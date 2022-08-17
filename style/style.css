@@ -1,4 +1,240 @@
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes moving-gradient {
+  from {
+    background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+  15% {
+    background-image: -webkit-gradient(linear, left top, right top, from(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), color-stop(violet), to(red));
+    background-image: linear-gradient(to right, orange, yellow, green, blue, indigo, violet, red);
+  }
+  30% {
+    background-image: -webkit-gradient(linear, left top, right top, from(yellow), color-stop(green), color-stop(blue), color-stop(indigo), color-stop(violet), color-stop(red), to(orange));
+    background-image: linear-gradient(to right, yellow, green, blue, indigo, violet, red, orange);
+  }
+  45% {
+    background-image: -webkit-gradient(linear, left top, right top, from(green), color-stop(blue), color-stop(indigo), color-stop(violet), color-stop(red), color-stop(orange), to(yellow));
+    background-image: linear-gradient(to right, green, blue, indigo, violet, red, orange, yellow);
+  }
+  60% {
+    background-image: -webkit-gradient(linear, left top, right top, from(blue), color-stop(indigo), color-stop(violet), color-stop(red), color-stop(orange), color-stop(yellow), to(green));
+    background-image: linear-gradient(to right, blue, indigo, violet, red, orange, yellow, green);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left top, right top, from(indigo), color-stop(violet), color-stop(red), color-stop(orange), color-stop(yellow), color-stop(green), to(blue));
+    background-image: linear-gradient(to right, indigo, violet, red, orange, yellow, green, blue);
+  }
+  85% {
+    background-image: -webkit-gradient(linear, left top, right top, from(violet), color-stop(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(indigo));
+    background-image: linear-gradient(to right, violet, red, orange, yellow, green, blue, indigo);
+  }
+  to {
+    background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+
+@keyframes moving-gradient {
+  from {
+    background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+  15% {
+    background-image: -webkit-gradient(linear, left top, right top, from(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), color-stop(violet), to(red));
+    background-image: linear-gradient(to right, orange, yellow, green, blue, indigo, violet, red);
+  }
+  30% {
+    background-image: -webkit-gradient(linear, left top, right top, from(yellow), color-stop(green), color-stop(blue), color-stop(indigo), color-stop(violet), color-stop(red), to(orange));
+    background-image: linear-gradient(to right, yellow, green, blue, indigo, violet, red, orange);
+  }
+  45% {
+    background-image: -webkit-gradient(linear, left top, right top, from(green), color-stop(blue), color-stop(indigo), color-stop(violet), color-stop(red), color-stop(orange), to(yellow));
+    background-image: linear-gradient(to right, green, blue, indigo, violet, red, orange, yellow);
+  }
+  60% {
+    background-image: -webkit-gradient(linear, left top, right top, from(blue), color-stop(indigo), color-stop(violet), color-stop(red), color-stop(orange), color-stop(yellow), to(green));
+    background-image: linear-gradient(to right, blue, indigo, violet, red, orange, yellow, green);
+  }
+  75% {
+    background-image: -webkit-gradient(linear, left top, right top, from(indigo), color-stop(violet), color-stop(red), color-stop(orange), color-stop(yellow), color-stop(green), to(blue));
+    background-image: linear-gradient(to right, indigo, violet, red, orange, yellow, green, blue);
+  }
+  85% {
+    background-image: -webkit-gradient(linear, left top, right top, from(violet), color-stop(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), to(indigo));
+    background-image: linear-gradient(to right, violet, red, orange, yellow, green, blue, indigo);
+  }
+  to {
+    background-image: -webkit-gradient(linear, left top, right top, from(red), color-stop(orange), color-stop(yellow), color-stop(green), color-stop(blue), color-stop(indigo), to(violet));
+    background-image: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+  }
+}
+
 * {
   font-family: 'Lato',sans-serif;
 }
+
+body {
+  background-color: #000;
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.title {
+  height: 10vh;
+  -webkit-animation: fadein ease-in-out 3s;
+          animation: fadein ease-in-out 3s;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+  -webkit-animation: fadein linear 3s;
+          animation: fadein linear 3s;
+}
+
+.hline {
+  width: 100vw;
+  height: 2px;
+  -webkit-animation: infinite moving-gradient ease-in 1.2s;
+          animation: infinite moving-gradient ease-in 1.2s;
+}
+
+#rules {
+  -webkit-animation: fadein ease-in-out 10s;
+          animation: fadein ease-in-out 10s;
+  background-color: #000;
+  color: white;
+  -webkit-transition: ease-in-out 2s;
+  transition: ease-in-out 2s;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+}
+
+#rules:hover {
+  color: red;
+  -webkit-transition: ease-in-out 1s;
+  transition: ease-in-out 1s;
+  scale: 1.2;
+  width: 100%;
+}
+
+.players {
+  margin-top: 2rem;
+  height: 80vh;
+  -webkit-animation: fadein ease-in-out 15s;
+          animation: fadein ease-in-out 15s;
+}
+
+.scores {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.styled-button {
+  padding-top: 5vh;
+  background-color: transparent;
+  border-radius: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5vh;
+}
+
+#rolldice-button {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #b9b9d9;
+  -webkit-box-shadow: 10px 10px 20px #9d9db8, -10px -10px 20px #d5d5fa;
+          box-shadow: 10px 10px 20px #9d9db8, -10px -10px 20px #d5d5fa;
+  color: #484855;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+#hold-button {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #b9b9d9;
+  -webkit-box-shadow: 10px 10px 20px #9d9db8, -10px -10px 20px #d5d5fa;
+          box-shadow: 10px 10px 20px #9d9db8, -10px -10px 20px #d5d5fa;
+  color: #484855;
+  margin-left: auto;
+  margin-right: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-weight: bold;
+}
+
+#rolldice {
+  padding: 2vh 2vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.player1 {
+  background: darkgray;
+}
+
+.player2 {
+  background-color: brown;
+}
+
+.scores {
+  background-color: #b9b9d9;
+}
+
+/*
+code en attente pour le botuon rolldice
+#rolldice-button{
+  /*height: 50%;
+  width: 50%;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  color: darkslategray;*/
 /*# sourceMappingURL=style.css.map */

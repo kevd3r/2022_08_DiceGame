@@ -1,6 +1,10 @@
+
 #ignoring node_modules files
 node_modules
 #ignoring all .txt && .pdf files
 *.txt
 *.pdf
+#ignoring vscode configuration files
+.vscode
+
 

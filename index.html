@@ -3,13 +3,81 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=, initial-scale=1.0">
   <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
   <link rel="stylesheet" href="./style/style.css">
   <title>Document</title>
 </head>
 <body>
+  <div class="container-fluid">
+
+    <!-- header de la page -->
+    <div class="row col-12 title">
+      <h1>Welcome to our new Game</h1>
+      <div class="hline"></div>
+    </div>
+    <div class="row rules">
+      <button id="rules">Rules of the Game</button>
+    </div>
+    <!-- conteneur des joueurs-->
+    <div class="row players">
+
+      <!-- Player 1 -->
+
+      <div class="col-12 col-sm-5 player1">
+        <div id="name">
+          Player 1
+        </div>
+        <div id="current">
+          <p>Round Score</p>
+          <div id="currentscore1">
+            0
+          </div>
+        </div>
+        <div id="global-score1">
+          <p>Global Score</p>
+          <div id="globalscore1">
+            0
+          </div>
+        </div>
+      </div>
+
+      <!-- Scores -->
+
+      <div class="col-12 col-sm-2 scores">
+        <div id="styled-rolldice-button" class="styled-button col-3 col-sm-12">
+          <button type="button" id="rolldice-button">RollDice</button>
+        </div>
+        <div id="rolldice" class="col-3 col-sm-12">
+          6
+        </div>
+        <div id="styled-hold-button" class="styled-button col-3 col-sm-12">
+          <button type="button" id="hold-button">Hold</button>
+        </div>
+      </div>
+
+      <!-- Player 2 -->
+
+      <div class="col-12 col-sm-5 player2">
+        <div id="name">
+          Player 2
+        </div>
+        <div id="current">
+          <p>Round Score</p>
+          <div id="currentscore2">
+            0
+          </div>
+        </div>
+        <div id="global-score2">
+          <p>Global Score</p>
+          <div id="globalscore2">
+            0
+          </div>
+      
+    </div>
+  </div>
   <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
   <script src="./scripts/script.js"></script>
 </body>
 </html>
+

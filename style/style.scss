@@ -1,3 +1,155 @@
+@mixin themeDark{
+  background-color: #000;
+  color: white;
+}
+@mixin themeLight{
+  background-color: white;
+  color: #000;
+}
+@mixin styled-button{
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  padding: 0;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #b9b9d9;
+  box-shadow: 10px 10px 20px #9d9db8, -10px -10px 20px #d5d5fa;
+  color: #484855;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  font-weight: bold;
+}
+
+@keyframes fadein {
+  from{
+    opacity:0;
+  } to {
+    opacity:1;
+  } 
+}
+@keyframes moving-gradient{
+  from{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  }15% {
+    background-image: linear-gradient(to right,orange,yellow,green,blue,indigo,violet, red);
+  }30%{
+    background-image: linear-gradient(to right,yellow,green,blue,indigo,violet, red,orange);
+  }45%{
+    background-image: linear-gradient(to right,green,blue,indigo,violet, red,orange,yellow);
+  }60%{
+    background-image: linear-gradient(to right,blue,indigo,violet, red,orange,yellow,green);
+  }75%{
+    background-image: linear-gradient(to right,indigo,violet, red,orange,yellow,green,blue);
+  }85%{
+    background-image: linear-gradient(to right,violet, red,orange,yellow,green,blue,indigo);
+  }to{
+    background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  }
+}
+
+
 *{
   font-family: 'Lato',sans-serif;
 }
+
+body{
+  @include themeDark;
+  box-sizing: border-box;
+}
+
+.container-fluid{
+  padding: 0;
+}
+
+//header's css
+.title{
+  height: 10vh;
+  animation:fadein ease-in-out 3s;
+  margin: 0;
+}
+h1{
+  text-align: center;
+  animation: fadein linear 3s;
+}
+.hline{
+  width: 100vw;
+  height: 2px;
+  //background-image: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet);
+  animation:infinite moving-gradient ease-in 1.2s;
+}
+
+
+#rules{
+  animation: fadein ease-in-out 10s;
+  @include themeDark;
+  transition: ease-in-out 2s;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  border: none;
+}
+#rules:hover{
+  color:red;
+  transition: ease-in-out 1s;
+  scale: 1.2;
+  width: 100%;
+}
+
+//main's css
+// div scores' styled buttons && scores' display
+
+.players{
+  margin-top: 2rem;
+  height: 80vh;
+  animation: fadein ease-in-out 15s;
+}
+
+.scores{
+  align-items: center;
+}
+//button generic style
+.styled-button{
+  padding-top: 5vh;
+  background-color: transparent;
+  border-radius:20%;
+  display: flex;
+  align-items: center;
+  margin-top: 5vh;
+}
+//trying neumorphism
+#rolldice-button{
+  @include styled-button;
+}
+#hold-button{
+  @include styled-button;
+}
+#rolldice{
+  padding: 2vh 2vh;
+  align-items: center;
+}
+
+//css pour la config css du projet
+.player1{
+  background: darkgray;
+}
+.player2{
+  background-color: brown;
+}
+.scores{
+  background-color:  #b9b9d9;
+}
+
+
+/*
+code en attente pour le botuon rolldice
+#rolldice-button{
+  /*height: 50%;
+  width: 50%;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  color: darkslategray;*/
+
